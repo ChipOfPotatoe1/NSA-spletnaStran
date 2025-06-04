@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Domov | Avtohiša Brzina</title>
+		<meta charset="utf-8">
+        <meta name="description" content="Prodaja avtomobilov pri avtohiši brzina">
+		<meta name="keywords" content="avtohiša, avto, honda, suzuki, hyundai, prodaja, odkup">
+		<meta name="author" content="Jure Udir">
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" href="slike/ikona.ico" type="image/x-icon">
+        <style>
+            /* Tabela – osnovni stil */
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 30px;
+                font-family: Arial, sans-serif;
+                font-size: 16px;
+            }
+
+            /* Glava tabele */
+            thead {
+                background-color: #003366;
+                color: white;
+            }
+
+            thead th {
+                padding: 14px;
+                border: 1px solid #ccc;
+                text-align: left;
+            }
+
+            /* Telo tabele */
+            tbody td {
+                padding: 12px;
+                border: 1px solid #ccc;
+            }
+
+            /* Menjalne barve vrstic */
+            tbody tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            /* Hover efekt za boljšo preglednost */
+            tbody tr:hover {
+                background-color: #e6f0ff;
+                cursor: default;
+            }
+
+            /* Naslov nad tabelo */
+            h2 {
+                text-align: center;
+                font-size: 1.8em;
+                color: #003366;
+                margin-bottom: 20px;
+            }
+        </style>
+	</head>
+	<body>
+		<header>
+			<div style="display: flex; align-items: center; justify-content: space-between; height: 100%; padding: 0 20px;">
+				<img src="slike/logo-bel.png" alt="logotip" style="height: 200px; position: absolute; top: -40px; left: 20px;">
+				<div style="text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+					<h1 style="margin: 0; font-size: 2em;">Dobrodošli v Avtohiši Brzina</h1>
+					<p style="margin: 5px 0 0;">Najboljša izbira rabljenih in novih vozil!</p>
+				</div>
+			</div>
+		</header>
+		<nav>
+			<a href="index.html">Domov</a>
+			<div class="dropdown">
+				<a href="NovaVozila.html">Nova vozila</a>
+				<div class="dropdown-content">
+					<a href="novaVozila_Honda.html">Honda</a>
+					<a href="novaVozila_Hyundai.html">Hyundai</a>
+					<a href="novaVozila_Suzuki.html">Suzuki</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<a href="RabljenaVozila.html">Rabljena vozila</a>
+				<div class="dropdown-content">
+					<a href="rabljenaVozila_Honda.html">Honda</a>
+					<a href="rabljenaVozila_Hyundai.html">Hyundai</a>
+					<a href="rabljenaVozila_Suzuki.html">Suzuki</a>
+				</div>
+			</div>
+            <a href="cenik.html">Cenik</a>
+			<a href="narocilo.html">Naročilo</a>
+            <a href="zavarovanje.html">Zavarovanje</href>
+			<a href="kontakt.html">Kontakt</a>
+			<a href="opis.html">O nas</a>
+		</nav>
+		<main style="padding: 40px; max-width: 1000px; margin: auto;">
+            <h2 style="text-align: center;">Cenik vozil letnika 2025</h2>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+                <thead style="background-color: #003366; color: white;">
+                    <tr>
+                        <th style="padding: 12px; border: 1px solid #ccc;">Znamka</th>
+                        <th style="padding: 12px; border: 1px solid #ccc;">Model</th>
+                        <th style="padding: 12px; border: 1px solid #ccc;">Tip</th>
+                        <th style="padding: 12px; border: 1px solid #ccc;">Letnik</th>
+                        <th style="padding: 12px; border: 1px solid #ccc;">Cena (€)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Honda -->
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Honda</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Civic</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">Nova</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">2025</td>
+                        <td style="padding: 10px; border: 1px solid #ccc;">35.000</td>
+                    </tr>
+                    <tr>
+                        <td>Honda</td>
+                        <td>Prelude</td>
+                        <td>Nova</td>
+                        <td>2025</td>
+                        <td>42.000</td>
+                    </tr>
+                    <tr>
+                        <td>Honda</td>
+                        <td>Accord</td>
+                        <td>Nova</td>
+                        <td>2025</td>
+                        <td>29.000</td>
+                    </tr>
+        
+                    <!-- Hyundai -->
+                    <tr>
+                        <td>Hyundai</td>
+                        <td>i20N</td>
+                        <td>Nova</td>
+                        <td>2025</td>
+                        <td>28.000</td>
+                    </tr>
+                    <tr>
+                        <td>Hyundai</td>
+                        <td>i30N</td>
+                        <td>Nova</td>
+                        <td>2025</td>
+                        <td>33.000</td>
+                    </tr>
+                    <tr>
+                        <td>Hyundai</td>
+                        <td>Tucson</td>
+                        <td>Nova</td>
+                        <td>2025</td>
+                        <td>25.000</td>
+                    </tr>
+        
+                    <!-- Suzuki -->
+                    <tr>
+                        <td>Suzuki</td>
+                        <td>Swift Sport</td>
+                        <td>Nova</td>
+                        <td>2025</td>
+                        <td>23.000</td>
+                    </tr>
+                    <tr>
+                        <td>Suzuki</td>
+                        <td>Vitara</td>
+                        <td>Nova</td>
+                        <td>2025</td>
+                        <td>27.000</td>
+                    </tr>
+                    <tr>
+                        <td>Suzuki</td>
+                        <td>S-Cross</td>
+                        <td>Nova</td>
+                        <td>2025</td>
+                        <td>38.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+		<footer>
+			<p>2025 Avtohiša Brzina. Vse pravice pridržane.</p>
+		</footer>
+	</body>
+</html>

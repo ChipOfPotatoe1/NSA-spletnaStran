@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Naročilo | Avtohiša Brzina</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Prodaja avtomobilov pri avtohiši brzina">
+		<meta name="keywords" content="avtohiša, avto, honda, suzuki, hyundai, prodaja, odkup">
+		<meta name="author" content="Jure Udir">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="slike/ikona.ico" type="image/x-icon">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f7f7f7;
+                margin: 0;
+                padding: 0;
+            }
+
+            main {
+                padding: 30px;
+                max-width: 800px;
+                margin: auto;
+                background-color: white;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+                border-radius: 12px;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            label {
+                font-weight: bold;
+                margin-top: 10px;
+            }
+
+            select, input[type="text"], input[type="email"], textarea {
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                width: 100%;
+                font-size: 1em;
+                box-sizing: border-box;
+            }
+
+            textarea {
+                resize: vertical;
+            }
+
+            button[type="submit"] {
+                background-color: #005bbb;
+                color: white;
+                border: none;
+                padding: 12px 20px;
+                border-radius: 6px;
+                font-size: 1em;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                margin-top: 10px;
+                width: fit-content;
+            }
+
+            button[type="submit"]:hover {
+                background-color: #004499;
+            }
+
+            #cena {
+                font-size: 1.2em;
+                font-weight: bold;
+                color: #333;
+                margin-top: 10px;
+            }
+
+            .opozorilo {
+                background-color: #ffe6e6;
+                color: red;
+                font-weight: bold;
+                padding: 15px;
+                border: 1px solid red;
+                border-radius: 8px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            hr {
+                border: none;
+                border-top: 1px solid #ccc;
+                margin: 20px 0;
+            }
+
+            footer {
+                background-color: #003366;
+                color: white;
+                text-align: center;
+                padding: 15px 0;
+                margin-top: 40px;
+            }
+        </style>
+    </head>
+    <body>
+    <header>
+        <div style="display: flex; align-items: center; justify-content: space-between; height: 100%; padding: 0 20px;">
+            <img src="slike/logo-bel.png" alt="logotip" style="height: 200px; position: absolute; top: -40px; left: 20px;">
+            <div style="text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                <h1 style="margin: 0; font-size: 2em;">Naroči svoj novi avto</h1>
+                <p style="margin: 5px 0 0;">Izpolni zahtevane podatke ter se odpelji z novim vozilom!</p>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">Domov</a>
+        <div class="dropdown">
+            <a href="NovaVozila.html">Nova vozila</a>
+            <div class="dropdown-content">
+                <a href="novaVozila_Honda.html">Honda</a>
+                <a href="novaVozila_Hyundai.html">Hyundai</a>
+                <a href="novaVozila_Suzuki.html">Suzuki</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="RabljenaVozila.html">Rabljena vozila</a>
+            <div class="dropdown-content">
+                <a href="rabljenaVozila_Honda.html">Honda</a>
+                <a href="rabljenaVozila_Hyundai.html">Hyundai</a>
+                <a href="rabljenaVozila_Suzuki.html">Suzuki</a>
+            </div>
+        </div>
+        <a href="cenik.html">Cenik</a>
+        <a href="narocilo.html">Naročilo</a>
+        <a href="zavarovanje.html">Zavarovanje</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="opis.html">O nas</a>
+    </nav>
+
+    <main>
+        <div class="opozorilo">
+            Možno je naročiti le nove avte, rabljene se lahko kupi samo v živo.
+        </div>
+
+        <form onsubmit="prikaziPotrdilo(event)">
+            <label for="model">Izberite model avtomobila:
+                <select id="model" name="model">
+                    <option value="honda-civic" data-cena="35000">Honda Civic - 35.000€</option>
+                    <option value="honda-prelude" data-cena="42000">Honda Prelude - 42.000€</option>
+                    <option value="honda-accord" data-cena="29000">Honda Accord - 29.000€</option>
+                    <option value="hyundai-i20n" data-cena="28000">Hyundai i20N - 28.000€</option>
+                    <option value="hyundai-i30n" data-cena="33000">Hyundai i30N - 33.000€</option>
+                    <option value="hyundai-tucson" data-cena="25000">Hyundai Tucson - 25.000€</option>
+                    <option value="suzuki-swift" data-cena="23000">Suzuki Swift Sport - 23.000€</option>
+                    <option value="suzuki-vitara" data-cena="27000">Suzuki Vitara - 27.000€</option>
+                    <option value="suzuki-scross" data-cena="38000">Suzuki S-Cross - 38.000€</option>
+                </select>
+            </label>
+
+            <label>Izberite barvo:</label>
+            <div>
+                <label><input type="radio" name="barva" value="bela" checked> Bela</label><br>
+                <label><input type="radio" name="barva" value="črna"> Črna</label><br>
+                <label><input type="radio" name="barva" value="siva"> Siva</label><br>
+                <label><input type="radio" name="barva" value="rdeča"> Rdeča</label><br>
+                <label>
+                    <input type="radio" name="barva" value="lastna" id="lastnaBarvaRadio"> Lastna barva (+500€)
+                </label>
+                <input type="color" id="lastnaBarvaPicker" name="lastnaBarva" value="#ff0000" style="display:none; margin-left: 10px; vertical-align: middle;">
+            </div>
+
+            <label for="oprema">Izberite paket opreme:</label>
+            <select id="oprema" name="oprema">
+                <option value="osnovna">Osnovna</option>
+                <option value="sport">Sport (+1.500 €)</option>
+                <option value="executive">Executive (+2.000 €)</option>
+            </select>
+
+            <div id="cena">Cena: 22.000 €</div>
+
+            <hr>
+
+            <label for="ime">Ime in priimek:</label>
+            <input type="text" id="ime" name="ime" required>
+
+            <label for="email">Email naslov:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="kartica">Številka kartice:</label>
+            <input type="text" id="kartica" name="kartica" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+
+            <label for="opombe">Dodatne opombe:</label>
+            <textarea id="opombe" name="opombe" rows="3"></textarea>
+
+            <br><br>
+            <button type="submit">Oddaj naročilo</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>2025 Avtohiša Brzina. Vse pravice pridržane.</p>
+    </footer>
+
+    <script>
+        function izracunajCeno() {
+        const modelSelect = document.getElementById("model");
+        const opremaSelect = document.getElementById("oprema");
+        const cenaDiv = document.getElementById("cena");
+
+        const izbranModel = modelSelect.options[modelSelect.selectedIndex];
+        let cena = parseInt(izbranModel.dataset.cena);
+
+        const barvaRadio = document.querySelector('input[name="barva"]:checked');
+
+        if (barvaRadio && barvaRadio.value === "lastna") {
+            cena += 500;
+        }
+
+        if (opremaSelect.value === "sport") {
+            cena += 1500;
+        } else if (opremaSelect.value === "executive") {
+            cena += 2000;
+        }
+
+        cenaDiv.textContent = "Cena: " + cena.toLocaleString("sl-SI") + " €";
+    }
+
+    window.onload = function () {
+        document.getElementById("model").addEventListener("change", izracunajCeno);
+        document.getElementById("oprema").addEventListener("change", izracunajCeno);
+
+        // Za barvne radije
+        const barvaRadiji = document.querySelectorAll('input[name="barva"]');
+        const colorPicker = document.getElementById("lastnaBarvaPicker");
+
+        barvaRadiji.forEach(radio => {
+            radio.addEventListener("change", () => {
+                if (document.getElementById("lastnaBarvaRadio").checked) {
+                    colorPicker.style.display = "inline-block";
+                } else {
+                    colorPicker.style.display = "none";
+                }
+                izracunajCeno();
+            });
+        });
+
+        izracunajCeno();
+    };
+
+    function prikaziPotrdilo(event) {
+        event.preventDefault();
+        alert("Naročilo je bilo oddano!");
+        document.querySelector("form").reset();
+        document.getElementById("lastnaBarvaPicker").style.display = "none";
+        izracunajCeno();
+    }
+    </script>
+
+    </body>
+</html>
